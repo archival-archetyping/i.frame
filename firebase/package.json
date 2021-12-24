@@ -1,0 +1,41 @@
+{
+  "name": "iamas-open-house-2021--firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "14"
+  },
+  "scripts": {
+    "firebase": "npx firebase",
+    "emulate": "npx firebase emulators:start --import=test-data",
+    "start": "npm run emulate",
+    "deploy": "npm run firebase deploy --only functions",
+    "logs": "npm run firebase functions:log",
+    "lint": "npx eslint . --ext .js",
+    "lint:fix": "npx eslint --fix . --ext .js",
+    "setup": "npm run setup:install && npm run setup:configure",
+    "setup:install": "npm ci",
+    "setup:configure": "npx firebase login && node setup.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "agora-access-token": "^2.0.4",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.9.0",
+    "firebase-functions": "^3.14.1",
+    "firebase-tools": "^9.13.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "firebase-functions-test": "^0.3.0"
+  }
+}

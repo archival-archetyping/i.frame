@@ -1,0 +1,1 @@
+export { ModalMoreInfo } from './ModalMoreInfo'

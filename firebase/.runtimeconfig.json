@@ -1,0 +1,10 @@
+{
+  "agora": {
+    "rest": {
+      "user_secret": "58e83725c76c482bafd0face2055c7fd",
+      "username": "8f697102d44e41818f08e69963431258"
+    },
+    "app_certificate": "876cc686505f43ffb27c87215cec8725",
+    "app_id": "0c7e9a4a81414db2959d3def8a680cf3"
+  }
+}

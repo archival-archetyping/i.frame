@@ -1,0 +1,76 @@
+{
+  "name": "iamas-openhouse-2021",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^6.1.1",
+    "@emotion/babel-plugin": "^11.2.0",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/core": "^11.0.0",
+    "@emotion/css": "^11.1.3",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "@mdi/js": "^5.9.55",
+    "@mdi/react": "^1.4.0",
+    "@tailwindcss/line-clamp": "^0.2.0",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "agora-rtc-sdk-ng": "^4.3.0",
+    "autoprefixer": "^9",
+    "dayjs": "^1.10.5",
+    "firebase": "^8.3.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "lodash-es": "^4.17.21",
+    "postcss": "^7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-firebase-hooks": "^3.0.2",
+    "react-helmet": "^6.1.0",
+    "react-iframe": "^1.8.0",
+    "react-responsive-carousel": "^3.2.19",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-use": "^17.2.4",
+    "recoil": "^0.1.3",
+    "shortid": "^2.2.16",
+    "sweetalert2": "^10.15.6",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "twin.macro": "^2.3.0",
+    "use-mini18n": "^0.0.8",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "craco start",
+    "start:firebase": "npm run start --prefix ./firebase",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "setup:firebase": "npm run setup --prefix ./firebase",
+    "deploy:firebase": "npm run deploy --prefix ./firebase"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "tailwind.config.js"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
