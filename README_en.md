@@ -79,12 +79,12 @@ The key things you can do with *i.frame*:
 2. Click the [New Project] button in the upper right corner.
 3. In [Import Git Repository], select the repository you just forked and import it.
    * If you don't see the GitHub account you want, add the GitHub account you wish to install Vercel from the list of namespaces.
-   * If you see the GitHub account but not the repository you want, click [Adjust GitHub App Permissions] to grant permissions to Vercel.
-4. In the [Build and Output Settings], enable **OVERRIDE** for **BUILD COMMAND**, and enter `CI='' npm run build`.
+   * If you see the GitHub account but not the repository you want, click **Adjust GitHub App Permissions** to grant permissions to Vercel.
+4. In the **Build and Output Settings**, enable **OVERRIDE** for **BUILD COMMAND**, and enter `CI='' npm run build`.
 5. Click the **Deploy** button to start the deployment, and wait for a few minutes until the deployment finishes.
 6. The screen will switch to another one when the deployment is finished, so click the **Go to Dashboard** button to return to the dashboard.
    * Note: Every time the main GitHub branch is updated, it will be deployed automatically.
-7. The first time you deploy, the domain will be automatically set based on the project name (e.g., `iamas-open-house-2021.vercel.app` if **PROJECT NAME** is `iamas-open-house-2021`). Click on the **View Domains** button and set it if you want to change it. Keep the finalized origin of your public website (e.g., `https://iamas-open-house-2021.vercel.app`) (note that since it is an origin, it does not contain a trailing slash). :memo:
+7. The first time you deploy, the domain will be automatically set based on the project name (e.g., `iamas-open-house-2021.vercel.app` if **PROJECT NAME** is `iamas-open-house-2021`). Click on the **View Domains** button and set it if you want to change it (note: this button may not be displayed if the screen's width is too narrow). Keep the finalized origin of your public website (e.g., `https://iamas-open-house-2021.vercel.app`) (note that since it is an origin, it does not contain a trailing slash). :memo:
 
 ### Agora settings
 
@@ -101,9 +101,9 @@ The key things you can do with *i.frame*:
 1. Go to [https://firebase.google.com/](https://firebase.google.com/) and sign in with your Google account.
 2. Click **Go to console** in the upper right corner of the screen.
 3. Click **Add project** and enter a project name to create it (configure Google Analytics if necessary).
-4. Select **Build** ＞ **Functions** from the list on the left of the screen, and click **Upgrade**. Make sure the **Selected plan** is set to **Blaze** and click the **Purchase** button to purchase the plan (set the **Budget alert** if necessary).
+4. Select **Build** ＞ **Functions** from the list on the left of the screen, and click **Upgrade project**. Make sure the **Selected plan** is set to **Blaze** and click the **Purchase** button to purchase the plan (set the **Budget alert** if necessary).
 5. Click on the cog to the right of **Project Summary** and select **Project settings** from the list that appears, and keep the **Project ID** in the screen that appears. :memo:
-6. Click **Build** ＞ **Firestore Database** from the list on the left of the screen, click the **Create Database** button on the screen that appears, select **Start in Test Mode**, and click the **Next** button. Under **Cloud Firestore Location**, select [a location close to where the application will be used](https://firebase.google.com/docs/firestore/locations#location-r) and click the **Enable** button to enable it.
+6. Click **Build** ＞ **Firestore Database** from the list on the left of the screen, click the **Create database** button on the screen that appears, select **Start in test mode**, and click the **Next** button. Under **Cloud Firestore Location**, select [a location close to where the application will be used](https://firebase.google.com/docs/firestore/locations#location-r) and click the **Enable** button to enable it.
 
 #### Things to do on your local computer
 
@@ -162,7 +162,7 @@ To update Firestore from a spreadsheet, refer to the Google Workspace Admin Help
 #### Things to do in the Firebase Console (Part 2)
 
 1. Navigate to **Project Overview** ＞ **Project settings** ＞ **Your apps**, click the `</>` button, enter the nickname of your app, and keep a note of the contents of `firebaseConfig` from the code displayed in **SDK setup and configuration**. :memo:
-2. Keep a note of the URL listed in **Build** ＞ **Functions** ＞ **Dashboard** ＞ **Trigger** column. :memo:
+2. Keep a note of the URL listed in **Build** ＞ **Functions** ＞ **Dashboard** ＞ **Trigger** column (note: if you can't see the **Dashboard**, reload the page). :memo:
 
 #### Things to do on Vercel
 
