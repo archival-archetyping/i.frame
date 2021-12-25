@@ -129,7 +129,7 @@ export const UserIcon = (props) => {
         user && (
           <IconWrap size={size} color={user.key_color_id}>
             {
-              user.admin_id
+              user.registered_id
                 ? <Thumbnail src={user.thumbnail_url} />
                 : <Icon path={ICONS[Number(user.icon_id)].icon} size={size === 'large' ? 4 : 1} color="white" />
             }
@@ -140,7 +140,7 @@ export const UserIcon = (props) => {
       {
         user && name && (
           <Name>{
-            user && user.admin_id
+            user && user.registered_id
               ? lang === 'en'
                 ? user.name_en
                 : user.name_ja
