@@ -6,13 +6,13 @@ export const rooms = [
     "is_chat": true,
     "member": [],
     "is_used": true,
-    "type": "admin",
+    "type": "registered",
     "limit": 20
   },
   {
     "member": [],
     "limit": 20,
-    "type": "admin",
+    "type": "registered",
     "name": "ℹ️ 案内所 - Information",
     "is_chat": true,
     "is_voice": true,
@@ -25,7 +25,7 @@ export const rooms = [
     "is_voice": true,
     "name": "NxPC.Live vol.50 「窓」",
     "is_used": true,
-    "type": "admin",
+    "type": "registered",
     "is_chat": true,
     "member": []
   },

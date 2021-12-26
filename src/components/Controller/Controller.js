@@ -117,7 +117,7 @@ const VCCContainer = ({loading, joined, muted, rooms, admins, users, deviceId, k
             <JoinedVCCInfo>
               <JoinedVCCSectionTitle>{t['chat_in_chat']}</JoinedVCCSectionTitle>
               <JoinedVCCTitle keyColorId={keyColorId}>{ joinedRoom.name }</JoinedVCCTitle>
-              <JoinedVCCAuthor>{joinedRoom.type === 'admin' ? t['chat_channel_for_session'] : t['chat_channel_for_general']}</JoinedVCCAuthor>
+              <JoinedVCCAuthor>{joinedRoom.type === 'registered' ? t['chat_channel_for_session'] : t['chat_channel_for_general']}</JoinedVCCAuthor>
               <LeaveChannelWrap keyColorId={keyColorId} onClick={handleLeave}><Icon path={mdiLocationExit} size={1.2} /></LeaveChannelWrap>
             </JoinedVCCInfo>
           </JoinedVCC>
@@ -253,8 +253,8 @@ export const Controller = () => {
   const activeSessionIds = sessions && sessions.filter(session => session.is_active).map(session => session.room_id)
   const isLogin = users && users.filter(user => user.device_id === deviceId)[0]?.registered_id
   const channels = isLogin
-      ? rooms && rooms.filter(room => (room.member.length > 0 && room.type === 'anonymous') || room.type === 'admin')
-      : rooms && rooms.filter(room => (room.member.length > 0 && room.type === 'anonymous') || (room.type === 'admin' && activeSessionIds && activeSessionIds.includes(room.id)))
+      ? rooms && rooms.filter(room => (room.member.length > 0 && room.type === 'anonymous') || room.type === 'registered')
+      : rooms && rooms.filter(room => (room.member.length > 0 && room.type === 'anonymous') || (room.type === 'registered' && activeSessionIds && activeSessionIds.includes(room.id)))
   const orderedChannels = channels && sortBy(channels, [c => c.id !== joined, 'type'])
 
   useEffect(() => {
