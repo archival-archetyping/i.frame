@@ -151,7 +151,7 @@ const Session = () => {
         cancelButtonColor: '#d33',
       }).then( async (result) => {
         if (result.isConfirmed) {
-          const result_create = await fetchCreateRoom('admin', 999, session.title_ja, true, true)
+          const result_create = await fetchCreateRoom('registered', 999, session.title_ja, true, true)
           if (result_create.is_success) {
             Swal.fire({text: `${result_create.id}`})
           } else {
